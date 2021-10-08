@@ -1,0 +1,299 @@
+h1, h2, h3, h4, h5, h6, ul, li, div, html, header, body, main, p, section, figure, figcaption, footer, article, iframe, input, textarea, button, nav, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+*, a, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes goup {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goup {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes big {
+  0% {
+    -webkit-transform: translateX(-550px) scale(1);
+            transform: translateX(-550px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-550px) scale(4);
+            transform: translateX(-550px) scale(4);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 0;
+  }
+}
+
+@keyframes big {
+  0% {
+    -webkit-transform: translateX(-550px) scale(1);
+            transform: translateX(-550px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-550px) scale(4);
+            transform: translateX(-550px) scale(4);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes small {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes small {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes menuList {
+  0% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes menuList {
+  0% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes click {
+  0% {
+    -webkit-transform: translate(57px, 35px);
+            transform: translate(57px, 35px);
+  }
+  100% {
+    -webkit-transform: translate(57px, 49px);
+            transform: translate(57px, 49px);
+  }
+}
+
+@keyframes click {
+  0% {
+    -webkit-transform: translate(57px, 35px);
+            transform: translate(57px, 35px);
+  }
+  100% {
+    -webkit-transform: translate(57px, 49px);
+            transform: translate(57px, 49px);
+  }
+}
+
+html, body {
+  background-color: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 40;
+  background: #4a4a4a;
+  background-image: url("../img/space/space-stars.png"), url("../img/space/stars-blurred.png");
+  background-repeat: repeat;
+}
+
+header .header_warp {
+  position: relative;
+  height: 100vh;
+  z-index: 3;
+}
+
+header .header_warp h1 {
+  z-index: 999;
+  font-size: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .header_warp h1 a {
+  background: url(../img/index/wave_pink.gif) 50% 42%;
+  background-size: 100%;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+header .header_warp .menu .tgl_bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+header .header_warp .menu .tgl_bg svg {
+  width: 100%;
+  position: absolute;
+  right: 50%;
+  top: 0;
+  -webkit-transition: .75s;
+  transition: .75s;
+}
+
+header .header_warp .menu .tgl_btn {
+  position: absolute;
+  right: 15.5%;
+  top: 5%;
+  width: 3%;
+  background-color: aqua;
+}
+
+header .header_warp .menu .tgl_btn .tgl_open {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+header .header_warp .menu .tgl_btn .tgl_open img {
+  width: 100%;
+}
+
+header .header_warp .menu .tgl_btn .tgl_close {
+  z-index: -1;
+  width: 30px;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+header .header_warp .menu .tgl_btn .tgl_close span {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #b3d8e8;
+}
+
+header .header_warp .menu .tgl_btn .tgl_close span:nth-child(1) {
+  -webkit-transform: translateY(100%) rotate(45deg);
+          transform: translateY(100%) rotate(45deg);
+}
+
+header .header_warp .menu .tgl_btn .tgl_close span:nth-child(2) {
+  -webkit-transform: translateY(-1000%) rotate(-45deg);
+          transform: translateY(-1000%) rotate(-45deg);
+}
+
+header.hidden {
+  overflow: hidden;
+}
+
+header.none {
+  display: none;
+}
+
+.menubox {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-550px);
+          transform: translateX(-550px);
+  width: 383px;
+  height: 361px;
+  border-radius: 200px;
+  background: #ce918e;
+  display: none;
+}
+/*# sourceMappingURL=common.css.map */

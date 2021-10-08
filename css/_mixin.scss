@@ -1,0 +1,106 @@
+h1, h2, h3, h4, h5, h6, ul, li, div, html, header, body, main,p, section, figure, figcaption, footer, article, iframe, input, textarea, button, nav, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li {list-style: none;}
+a {text-decoration: none; color: black;}
+*,a,::after,::before {box-sizing: border-box;}
+
+
+
+@mixin absolute($a,$b,$c,$d){
+    position:absolute;
+    #{$a}: $b;
+    #{$c}: $d;
+}
+@keyframes goup {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes big {
+    0%{
+        transform: translateX(-550px) scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(-550px) scale(4);
+        opacity: 1;
+    }
+    80%{
+        transform: translateX(-550px) scale(10);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-550px) scale(10);
+        opacity: 0;
+    }
+}
+
+@keyframes small {
+    0%{
+        transform: scale(10);
+        opacity: 1;
+    }
+    75%{
+        // transform: scale(4);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes menuList {
+    0%{
+        transform: translate(0, 20px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@mixin ulAlign{
+    margin:0 auto;
+    width:1280px;
+}
+
+@mixin popup($a){
+    width: 162px; height: $a;
+    margin: 0 auto;
+    border: 1px solid #454545;
+    border-radius: 5px;      
+    margin: 10px 0;  
+}
+
+@mixin popupArrow {
+    content: '';
+    display: inline-block;
+    width: 20px; height: 28px;
+    background-size: 100%;
+}
+
+@mixin popupLi($a){
+    width: 162px; height: $a;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+// 빛나 .click 애니메이션
+@keyframes click {
+    0%{transform: translate(57px, 35px);}
+    100%{transform: translate(57px, 49px);}
+}

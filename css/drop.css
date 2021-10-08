@@ -1,0 +1,561 @@
+h1, h2, h3, h4, h5, h6, ul, li, div, html, header, body, main, p, section, figure, figcaption, footer, article, iframe, input, textarea, button, nav, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+*, a, ::after, ::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@-webkit-keyframes goup {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes goup {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes big {
+  0% {
+    -webkit-transform: translateX(-550px) scale(1);
+            transform: translateX(-550px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-550px) scale(4);
+            transform: translateX(-550px) scale(4);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 0;
+  }
+}
+
+@keyframes big {
+  0% {
+    -webkit-transform: translateX(-550px) scale(1);
+            transform: translateX(-550px) scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: translateX(-550px) scale(4);
+            transform: translateX(-550px) scale(4);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-550px) scale(10);
+            transform: translateX(-550px) scale(10);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes small {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes small {
+  0% {
+    -webkit-transform: scale(10);
+            transform: scale(10);
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes menuList {
+  0% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes menuList {
+  0% {
+    -webkit-transform: translate(0, 20px);
+            transform: translate(0, 20px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes click {
+  0% {
+    -webkit-transform: translate(57px, 35px);
+            transform: translate(57px, 35px);
+  }
+  100% {
+    -webkit-transform: translate(57px, 49px);
+            transform: translate(57px, 49px);
+  }
+}
+
+@keyframes click {
+  0% {
+    -webkit-transform: translate(57px, 35px);
+            transform: translate(57px, 35px);
+  }
+  100% {
+    -webkit-transform: translate(57px, 49px);
+            transform: translate(57px, 49px);
+  }
+}
+
+html, body {
+  background-color: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  position: relative;
+  height: 74000px;
+}
+
+.sweet-room {
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.sweet-room .sky {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  z-index: 3;
+  background-color: #333;
+  text-align: center;
+}
+
+.sweet-room .sky .moon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.sweet-room .sky .sun {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(-250px, 250px);
+          transform: translate(-250px, 250px);
+}
+
+.sweet-room .room {
+  position: relative;
+  z-index: 4;
+  height: 80vh;
+  background-color: #ce918e;
+}
+
+.sweet-room .room img {
+  width: auto;
+}
+
+.sweet-room ul li {
+  width: 100%;
+}
+
+.sweet-room ul .desk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(20%, 15%);
+          transform: translate(20%, 15%);
+}
+
+.sweet-room ul .tree {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(72%, 15%);
+          transform: translate(72%, 15%);
+}
+
+.sweet-room ul .rug {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 15%);
+          transform: translate(20%, 15%);
+}
+
+.sweet-room ul .side-table {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(70%, 15%);
+          transform: translate(70%, 15%);
+}
+
+.sweet-room ul .bed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(45%, 10%);
+          transform: translate(45%, 10%);
+}
+
+.sweet-room ul .sleep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(45%, 10%);
+          transform: translate(45%, 10%);
+}
+
+.sweet-room ul .bed-sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate(45%, 10%);
+          transform: translate(45%, 10%);
+}
+
+.bath {
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  height: 100vh;
+}
+
+.bath .green {
+  background-color: #548e8e;
+  height: 40vh;
+}
+
+.bath .tile {
+  background-image: url("../img/bath/bathroom-tile.png");
+  background-repeat: repeat;
+  height: 60vh;
+}
+
+.bath .tile img {
+  width: auto;
+}
+
+.bath ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.bath ul .mirror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 6%);
+          transform: translate(20%, 6%);
+}
+
+.bath ul .shelf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(50%, 17%);
+          transform: translate(50%, 17%);
+}
+
+.bath ul .sink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 45%);
+          transform: translate(20%, 45%);
+}
+
+.bath ul .window {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(60%, 6%);
+          transform: translate(60%, 6%);
+}
+
+.bath ul .clock-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(72%, 10%);
+          transform: translate(72%, 10%);
+}
+
+.bath ul .clock-hand {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(72%, 10%);
+          transform: translate(72%, 10%);
+}
+
+.bath ul .light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(48%, 0%);
+          transform: translate(48%, 0%);
+}
+
+.bath ul .mat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 60%);
+          transform: translate(40%, 60%);
+}
+
+.bath ul .chair {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(70%, 50%);
+          transform: translate(70%, 50%);
+}
+
+.bath ul .curtain {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 15%);
+          transform: translate(40%, 15%);
+}
+
+.bath ul .bath-tub {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 90%);
+          transform: translate(40%, 90%);
+}
+
+.bath ul .bath-tub-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 90%);
+          transform: translate(40%, 90%);
+}
+
+.fitthing {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.fitthing .purple {
+  background-color: #6b4b5a;
+  height: 40vh;
+}
+
+.fitthing .clothes {
+  height: 60vh;
+  background-color: #b3d8e8;
+}
+
+.fitthing .clothes img {
+  width: auto;
+}
+
+.fitthing ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.fitthing ul .wardrobe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 10%);
+          transform: translate(20%, 10%);
+}
+
+.fitthing ul .rail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 10%);
+          transform: translate(20%, 10%);
+}
+
+.fitthing ul .rug {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 70%);
+          transform: translate(40%, 70%);
+}
+
+.fitthing ul .lamp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(70%, 35%);
+          transform: translate(70%, 35%);
+}
+
+.fitthing ul .picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(50%, 10%);
+          transform: translate(50%, 10%);
+}
+
+.living {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.living .green {
+  background-color: #619191;
+  height: 40vh;
+}
+
+.living .meal {
+  height: 60vh;
+  background-color: #d1d5d1;
+}
+
+.living .meal img {
+  width: auto;
+}
+
+.living ul li {
+  width: 100%;
+  height: 100%;
+}
+
+.living ul .counters {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(40%, 10%);
+          transform: translate(40%, 10%);
+}
+
+.living ul .knife {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(33%, 13%);
+          transform: translate(33%, 13%);
+}
+
+.living ul .shelf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(45%, 10%);
+          transform: translate(45%, 10%);
+}
+
+.living ul .chalkboard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(18%, 10%);
+          transform: translate(18%, 10%);
+}
+
+.living ul .bin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(45%, 65%);
+          transform: translate(45%, 65%);
+}
+
+.living ul .rug {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(55%, 70%);
+          transform: translate(55%, 70%);
+}
+
+.living ul .table {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(18%, 55%);
+          transform: translate(18%, 55%);
+}
+/*# sourceMappingURL=drop.css.map */

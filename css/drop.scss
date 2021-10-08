@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import '_mixin.scss';
+
+html,body{
+    background-color: none;
+    margin:0; padding:0;
+}
+main{
+    position:relative;
+    height: 74000px;
+}
+.sweet-room{
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    .sky{
+        width:100%;
+        height: 20vh;
+        position: relative;
+        // @include absolute(top,0,bottom,0);
+        // position: fixed;
+        z-index: 3;
+        background-color: #333;
+        text-align: center;
+
+        .moon{
+            @include absolute(top,0,bottom,0);
+        }
+        .sun{
+            @include absolute(top,0,bottom,0);
+            transform: translate(-250px, 250px);
+        }
+    }
+    .room{
+        // overflow: hidden;
+        position: relative;
+        // position:sticky;
+        // margin-top: 200px;
+        // top:200px;
+        z-index: 4;
+        height: 80vh;
+        background-color: #ce918e;
+        img{
+            width:auto;
+        }
+    }
+    ul{
+        li{width:100%;}
+        .desk{
+            @include absolute(top,0,bottom,0);
+            transform: translate(20%, 15%);
+        }
+        .tree{
+            @include absolute(bottom,0,right,0);
+            transform: translate(72%, 15%);
+        }
+        .rug{
+            @include absolute(bottom,0,left,0);
+            transform: translate(20%, 15%);
+        }
+        .side-table{
+            @include absolute(top,0,bottom,0);
+            transform: translate(70%, 15%);
+        }
+        .bed{
+            @include absolute(top,0,bottom,0);
+            transform: translate(45%, 10%);
+        }
+        .sleep{
+            @include absolute(top,0,bottom,0);
+            transform: translate(45% , 10%);
+        }
+        .bed-sheet{
+            @include absolute(top,0,bottom,0);
+            transform: translate(45%, 10%);
+        }
+    }
+}
+
+.bath{
+    overflow: hidden;
+    position: relative;
+    // position:sticky;
+    top:0;
+    height: 100vh;
+    .green{
+    background-color: #548e8e;
+    height: 40vh;
+    }
+    .tile{
+        background-image: url("../img/bath/bathroom-tile.png"); 
+        background-repeat: repeat;
+        height:60vh;
+        img{width:auto;}
+    }
+    ul{
+        li{width:100%; height: 100%;}
+        .mirror{
+            @include absolute(top,0,left,0);
+            transform: translate(20%, 6%);
+        }
+        .shelf{
+        @include absolute(top,0,left,0);
+        transform: translate(50%, 17%);
+        }
+        .sink{
+        @include absolute(top,0,left,0);
+        transform: translate(20%, 45%);
+        }
+        .window{
+        @include absolute(top,0,left,0);
+        transform: translate(60%, 6%);
+        }
+        .clock-face{
+        @include absolute(top,0,left,0);
+        transform: translate(72%, 10%);
+        }
+        .clock-hand{
+        @include absolute(top,0,left,0);
+        transform: translate(72%, 10%);
+        }
+        .light{
+            @include absolute(top,0,left,0);
+            transform: translate(48%, 0%);
+        }
+        .mat{
+            @include absolute(top,0,left,0);
+            transform: translate(40%, 60%);
+        }
+        .chair{
+            @include absolute(top,0,left,0);
+            transform: translate(70%, 50%);
+        }
+        .curtain{
+        display: none;
+        @include absolute(top,0,left,0);
+        transform: translate(40%, 15%);
+        }
+        .bath-tub{
+        @include absolute(top,0,left,0);
+        transform: translate(40%, 90%);
+        }
+        .bath-tub-top{
+        @include absolute(top,0,left,0);
+        transform: translate(40%, 90%);
+        }
+    }    
+}
+
+.fitthing{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    position:sticky;
+    top:0;
+    .purple{
+        background-color: #6b4b5a;
+        height: 40vh;
+    }
+    .clothes{
+        height:60vh;
+        img{width:auto;}
+        background-color:#b3d8e8; 
+    }
+    ul{
+        li{width:100%; height:100%;}
+        .wardrobe{
+            @include absolute(top,0,left,0);
+            transform: translate(20%, 10%);
+        }
+        .rail{
+            @include absolute(top,0,left,0);
+            transform: translate(20%, 10%);
+        }
+        .rug{
+            @include absolute(top,0,left,0);
+            transform: translate(40%, 70%);
+        }
+        .lamp{
+            @include absolute(top,0,left,0);
+            transform: translate(70%,35%);
+        }
+        .picture{
+            @include absolute(top,0,left,0);
+            transform: translate(50%, 10%);
+        }
+    }
+}
+
+.living{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    position:sticky;
+    top:0;
+    .green{
+        background-color: #619191;
+        height: 40vh;
+    }
+    .meal{
+        height:60vh;
+        img{width:auto;}
+        background-color:#d1d5d1; 
+    }
+    ul{
+        li{width:100%; height:100%;}
+        .counters{
+            @include absolute(top,0,left,0);
+            transform: translate(40%, 10%);
+        }
+        .knife{
+            @include absolute(top,0,left,0);
+            transform: translate(33%, 13%);
+        }
+        .shelf{
+            @include absolute(top,0,left,0);
+            transform: translate(45%, 10%);
+        }
+        .chalkboard{
+            @include absolute(top,0,left,0);
+            transform: translate(18%, 10%);
+        }
+        .bin{
+            @include absolute(top,0,left,0);
+            transform: translate(45%,65%);
+        }
+        .rug{
+            @include absolute(top,0,left,0);
+            transform: translate(55%, 70%);
+        }
+        .table{
+            @include absolute(top,0,left,0);
+            transform: translate(18%, 55%);
+        }
+    }
+}

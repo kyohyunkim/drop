@@ -1,0 +1,12 @@
+[{
+	"x":100,
+	"y":485,
+	"width":250,
+	"height":80,
+	"class":"link",
+	"data":
+		{
+			"url": "http://naver.com"
+		}
+}
+]

@@ -1,0 +1,545 @@
+@charset "utf-8";
+@import '_mixin.scss';
+@import 'common.scss';
+svg{width:162px;}
+main{
+    position:relative;
+    height: 10000px;
+    scroll-behavior: smooth;
+
+}
+main.active{
+    position: fixed;
+}
+// 김교현 - 여기서부터 밑으로 전부 수정하였습니다.
+.person{
+    position:fixed;
+    top:0; left:0;
+    z-index: 20;
+    // transform: translate(900px , 270px );
+    .fitting_person{
+            img{
+            width:162px;
+            position: absolute;
+            z-index: 999;
+            top:0; left:0;
+            }
+            .person_head{transform: translateY(1px);}
+
+    }
+    #spacesuit{display: none;}
+    
+}
+.el{
+    position: fixed;
+    z-index: 30;
+    li{
+        position: fixed;
+        left:calc(50% - 640px); 
+        top:0;
+    }
+    .bed-sheet{
+        left:calc(50% - 640px + 580px); 
+        top:302px;
+    }
+    .bath-tub{
+        left:calc(50% - 640px); 
+        top:0;
+        transform: translate(470px, 1200px);
+    }
+    .bath-tub-top{
+        left:calc(50% - 640px); 
+        top:0;
+        transform: translate(470px, 1200px);
+    }
+    .curtain{
+        background-image: url("../img/bath/shower-curtain.png");
+        background-repeat: no-repeat;
+        width:0; height: 100%;
+        left:calc(50% - 640px + 457px); 
+        top:271px;
+    }
+    .table{
+        left: calc(50% - 640px); 
+        top:0;
+        transform: translate(-1000px, 615px);
+    }
+}
+.el2{
+    z-index: 10;
+}
+.bus{
+    position: fixed;
+    z-index: 30;
+    width: 254px; height: 445px;
+    // 445
+    img{
+        // @include absolute(top,0,left,0);
+        // z-index: 9999;
+        width: 100%;
+    }
+}
+.bus.none{display: none;}
+.sweet-room{
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+
+    .sky{
+        width:100%;
+        height: 20vh;
+        overflow: hidden;
+        position: relative;
+        // @include absolute(top,0,bottom,0);
+        // position: fixed;
+        z-index: 3;
+        background-color: rgb(74,74,74);
+        text-align: center;
+        .sky_warp{
+            width: 1280px;
+            margin: 0 auto;
+            // background-color: #548e8e
+        }
+        .moon{
+            @include absolute(top,0,bottom,0);
+            transform: translate(0px, 40px);
+        }
+        .sun{
+            @include absolute(top,0,bottom,0);
+            transform: translate(-250px, 20vh);
+        }
+    }
+    .room{
+        z-index: 20;
+        height: 80vh;
+        background-color: #ce918e;
+        ul{
+            position: relative;
+            @include ulAlign;
+            .desk{
+                @include absolute(top,0,left,0);
+                transform: translate(150px, 150px);
+            }
+            .tree{
+                @include absolute(top,0,left,0);
+                transform: translate(1050px, 600px);
+            }
+            .rug{
+                @include absolute(bottom,0,left,0);
+                transform: translate(150px, 800px);
+            }
+            .side-table{
+                @include absolute(top,0,left,0);
+                transform: translate(1000px, 150px);
+            }
+            .bed{
+                z-index: 19;
+                @include absolute(top,0,left,0);
+                transform: translate(580px, 110px);
+            }
+            .sleep{
+                @include absolute(top,0,left,0);
+                transform: translate(580px , 110px );
+                &.active{
+                    position:fixed;
+                }
+            }
+            // .bed-sheet{
+            //     z-index: 21;
+            //     @include absolute(top,0,left,0);
+            //     transform: translate(580px, 110px);
+            // }
+        }
+        img{
+            width:auto;
+        }
+    }
+}
+
+.bath{
+    overflow: hidden;
+    position: relative;
+    // position:sticky;
+    top:0;
+    height: 100vh;
+    .light{z-index:11; position:absolute; top:0; left:0;}
+    .green{
+    background-color: #548e8e;
+    height: 40vh;
+        ul{
+            position: relative;
+            @include ulAlign;
+            .mirror{
+                @include absolute(top,0,left,0);
+                transform: translate(120px, 40px);
+            }
+            .shelf{
+            @include absolute(top,0,left,0);
+            transform: translate(650px, 170px);
+            }
+            .sink{
+            @include absolute(top,0,left,0);
+            transform: translate(100px, 0px);
+            }
+            .window{
+            @include absolute(top,0,left,0);
+            transform: translate(850px, 40px);
+            }
+            .clock-face{
+            width:82px; height:82px;
+            @include absolute(top,0,left,0);
+            transform: translate(1050px, 100px);
+            
+            }
+            .clock-hand{
+            width:82px; height:82px;
+            @include absolute(top,0,left,0);
+            transform: translate(1050px, 100px);
+            }
+            // .light{
+            //     @include absolute(top,0,left,0);
+            //     transform: translate(-600px, 0);
+            // }
+        }
+    }
+    .tile{
+        background-image: url("../img/bath/bathroom-tile.png"); 
+        background-repeat: repeat;
+        height:60vh;
+        img{width:auto;}
+
+        ul{
+            position: relative;
+            @include ulAlign;
+            .mat{
+                @include absolute(top,0,left,0);
+                transform: translate(470px, 230px);
+            }
+            .chair{
+                @include absolute(top,0,left,0);
+                transform: translate(1000px, 100px);
+            }
+            // .curtain{
+            // z-index:21;
+            // background-image: url("../img/bath/shower-curtain.png");
+            // background-repeat: no-repeat;
+            // width:0px; height: 100%;
+            // @include absolute(top,0,left,0);
+            // transform: translate(460px, -170px);
+            // }
+            .bath-tub{
+            @include absolute(top,0,left,0);
+            transform: translate(470px, 600px);
+            }
+
+        }  
+    }
+  
+}
+
+.fitthing{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    // position:sticky;
+    top:0;
+    .purple{
+        background-color: #6b4b5a;
+        height: 40vh;
+    }
+    .clothes{
+        height:60vh;
+        img{width:auto;}
+        background-color:#b3d8e8; 
+    }
+    ul{
+        position: relative;
+        @include ulAlign;
+        .wardrobe{
+            @include absolute(top,0,left,0);
+            transform: translate(-1000px, -250px);
+        }
+        .rail{
+            @include absolute(top,0,left,0);
+            transform: translate(100px, 1250px);
+        }
+        .rug2{
+            @include absolute(top,0,left,0);
+            transform: translate(500px, 1200px);
+        }
+        .lamp{
+            @include absolute(top,0,left,0);
+            transform: translate(1000px,1000px);
+        }
+        .picture{
+            @include absolute(top,0,left,0);
+            transform: translate(2000px, -300px);
+            .click{   // 빛나 클릭 클래스 추가
+                // display: none;
+                opacity:0;
+                width: 210px;
+                @include absolute(top,0,left,0);
+                transform: translate(57px,41px);
+                cursor: pointer;
+                animation: click 1s alternate linear infinite;
+            }
+        }
+        
+
+        .popup_container{
+            width: 300px; height: 570px;
+            @include absolute(left,1200px,top,-200px);
+            background-color: #eee;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            display: none;
+            span{
+                text-transform: uppercase;
+                font-size: 1.5em;
+            }
+            .popup01{
+                @include popup(140px);   
+                position: relative;    
+                .popup_arrow .popup_prev{            
+                    background: url('../img/wear/arrow_l.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(-200%, 170%);
+                }
+                .popup_arrow .popup_next{
+                    background: url('../img/wear/arrow_r.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(calc(162px + 80%), 170%);
+
+                }
+                .slider{
+                    display: block;
+                    width: 162px; height: 140px;                
+                    overflow: hidden;
+                }
+                .slider .popup_head{
+                    display: flex;
+                    justify-content: start;
+                    transition: 0.3s
+                }
+                .slider .popup_head li{
+                    @include popupLi(140px)
+                }
+            }
+            .popup02{
+                @include popup(150px);       
+                .popup_arrow .popup_prev{            
+                    background: url('../img/wear/arrow_l.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(-200%, 170%);
+                }
+                .popup_arrow .popup_next{
+                    background: url('../img/wear/arrow_r.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(calc(162px + 80%), 170%);
+                }
+                .slider{
+                    display: block;
+                    width: 162px; height: 150px;                
+                    overflow: hidden;
+                }
+                .slider .popup_top{
+                    display: flex;
+                    justify-content: start;                    
+                    transition: 0.3s
+                }
+                .slider .popup_top li{
+                    @include popupLi(150px)
+                }
+            }
+            .popup03{
+                @include popup(140px);       
+                .popup_arrow .popup_prev{            
+                    background: url('../img/wear/arrow_l.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(-200%, 170%);
+                }
+                .popup_arrow .popup_next{
+                    background: url('../img/wear/arrow_r.png') no-repeat center center;
+                    @include popupArrow;
+                    @include absolute(left,0,top,0);
+                    transform: translate(calc(162px + 80%), 170%);
+                }
+                .slider{
+                    display: block;
+                    width: 162px; height: 140px;                
+                    overflow: hidden;
+                }
+                .slider .popup_bottom{
+                    display: flex;
+                    justify-content: start;                    
+                    transition: 0.3s      
+                }
+                .slider .popup_bottom li{
+                    @include popupLi(140px)
+                }
+            }
+            
+        }
+          
+    }
+}
+    .purple{
+        background-color: #6b4b5a;
+        height: 40vh;
+    }
+    .clothes{
+        height:60vh;
+        img{width:auto;}
+        background-color:#b3d8e8; 
+    }
+
+
+// 유비 리빙 부터 전부 수정
+.living{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    // position:sticky;
+    top:0;
+    .green{
+        background-color: #619191;
+        height: 40vh;
+    }
+    .meal{
+        height:60vh;
+        // img{width:auto;}
+        background-color:#d1d5d1; 
+    }
+    ul{
+        position: relative;
+        @include ulAlign;
+        .counters{
+            @include absolute(top,0,left,0);
+            transform: translate(-1300px, 250px);
+        }
+        .knife{
+            @include absolute(top,0,left,0);
+            transform: translate(-1300px, 280px);
+        }
+        .shelf2{
+            @include absolute(top,0,left,0);
+            transform: translate(-1300px, 250px);
+        }
+        .chalkboard{
+            @include absolute(top,0,left,0);
+            transform: translate(2000px, 200px);
+        }
+        .chalkboard2{
+            opacity: 0;
+            @include absolute(top,0,left,0);
+            transform: translate(150px, 200px);
+        }
+        .bin{
+            @include absolute(top,0,left,0);
+            transform: translate(450px, 800px);
+        }
+        .rug3{
+            @include absolute(top,0,left,0);
+            transform: translate(700px, -1300px);
+        }
+        // .table{
+        //     @include absolute(top,0,left,0);
+        //     transform: translate(2000px, 180px);
+        //     z-index: 99999999;
+        // }
+    }
+}
+
+.road_wrap{
+    height: 350vh;
+    position: relative;
+    // overflow: hidden;
+    top:0;
+    background-color: rgb(53, 66, 80);
+    background-image: url("../img/space/space-stars.png"), url("../img/space/stars-blurred.png");
+    .road{
+        width: 100%;
+        background-color: rgb(172, 198, 102); 
+    }
+    .road2{
+        width: 100%;
+        margin: 0 auto;
+        height: 350vh;        
+        background: url('../img/road/road.png') repeat-y center top;
+        // width: 500px;
+        // position: relative
+    }    
+    .roadworks{
+        @include absolute(top,150vh,left,52%);
+    }
+}
+// 빛나 우주에있는 행서/사람 애니메이션
+@for $i from 1 to  7 {
+    .space-img#{$i}{
+        animation: spaceMoving 1s linear infinite alternate;
+        animation-delay: calc(#{$i}*2s);
+    }
+}
+.space{
+    height: 100vh;
+    position: relative;
+    background-color: rgb(53, 66, 80);
+    background-image: url("../img/space/space-stars.png");
+    
+    overflow: hidden;
+    .spaceStar{
+        // transition:.1s;
+        background-image: url("../img/space/stars-blurred.png");
+        background-repeat: repeat;
+        height: 200vh; width:100%;
+        @include absolute(top,0,left,0);
+    }
+    ul{
+        position: relative;
+        @include ulAlign;
+        // img{
+        //     animation: spaceMoving 1s linear infinite alternate;    
+        // }
+    }
+
+    .alien{
+        @include absolute(top,0,left,0);
+        transform: translate(-1000px, 100px);   
+    }
+
+    .earth{
+        @include absolute(top,0,left,0);
+        transform: translate(-800px, 400px);
+    }    
+    .venus{
+        @include absolute(top,0,left,0);
+        transform: translate(1100px, -150px);
+    }
+    .mercury{
+        @include absolute(top,0,left,0);
+        transform: translate(1800px, 550px);
+    }
+    .saturn{
+        @include absolute(top,0,left,0);
+        transform: translate(400px, 1500px);
+    }
+}
+
+.sec_1{
+    position: sticky;
+    top: 0;
+}
+
+@keyframes spaceMoving {
+    100%{
+        transform:translateY(-20%);
+    }
+}

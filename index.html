@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/magazine.css" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="./extras/jquery.min.1.7.js"></script>
+    <script type="text/javascript" src="./extras/modernizr.2.5.3.min.js"></script>
+    <script type="text/javascript" src="./lib/hash.js"></script>
+    <script defer src="./js/about.js"></script>
+
+    <script defer src="./js/anime.min.js"></script>
+    <script defer src="./js/index.js"></script>
+    <script defer src="./js/select.js"></script>
+
+    <!--  참고사이트 -->
+    <!-- http://everylastdrop.co.uk/ -->
+    
+    <title>DROP</title>
+</head>
+<body>
+    <header>
+        <div class="header_warp">
+            <h1><a href="#">DROP</a></h1>
+            <div class="menu">
+                <div class="tgl_bg">
+                    <svg id="tgl" data-name="toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+                        <path id="tgl_path" fill="#ce918e" d="M1481.43,0s27.8,2.89,48.36,20.31c8.33,7.06,13.35,18,19,28.64,8.25,15.56,17.78,30.32,41,30.76,22.81.44,32.48-11.76,39.29-24.77,4.82-9.22,8.22-18.85,13.83-24.68C1654.46,18.19,1667.47,6.58,1701,0Z"/>
+                    </svg>
+                </div>
+                <!-- <div class="tgl_btn">
+                    <a href="#" class="tgl_open"><img src="./img/index/wave2_b3d8e8_02.gif"></a>
+                    <a href="#" class="tgl_close">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div> -->
+            </div>
+            <div class="menubox"></div>
+        </div>
+    </header>
+    <div class="el el2">
+        <ul>
+            <li class="bath-tub"><img  src="img/bath/bath.png"></li>
+        </ul>
+    </div>
+    <div class="person">
+        <img id="sleep" src="img/clothes/avatar/jpg/person/person_sleep.png">
+        <!--교현 머리 상체 하체 분리된 사람 이미지 + 욕실에서 사람이미지 이걸로  바뀜 -->
+        <div class="fitting_person">  
+            <img class="person_head" id="person_head" src="img/clothes/avatar/svg/head/head_5.svg">
+            <img class="person_top" id="person_top" src="img/clothes/avatar/svg/top/top_5.svg">
+            <img class="person_bottom" id="person_bottom" src="img/clothes/avatar/svg/bottom/bottom_5.svg">
+        </div>
+        <img class="space_person" id="spacesuit" src="img/space/juan-spacesuit.png" alt="">
+    </div>
+    <div class="bus">
+        <img src="img/road/spaceship-1.png" alt="">
+    </div>
+    <div class="el">
+        <ul>
+            <li class="bed-sheet"><img src="img/bed/bed-sheet.png"></li> 
+            <li class="bath-tub-top"><img  src="img/bath/bath-top.png"></li>
+            <li class="curtain"></li>
+            <li class="table"><img  src="img/meal/table.png"></li>
+        </ul>
+    </div>
+    <main class="drop">
+        <div class="drop-room">
+            
+            <div class="sweet-room">
+                <div class="sky" data-bg0="rgb(74,74,74)" data-bg100="rgb(140,201,220)">
+                    <div class="sky_warp">
+                        <img class="stars night" src="img/bed/stars.png">
+                        <img class="moon night" src="img/bed/moon.png">
+                        <img class="sun" src="img/bed/sun.png">
+                    </div> 
+                </div>
+                <div class="room">
+                    <ul>
+                        <li class="desk"><img src="img/bed/desk.png"></li>
+                        <li class="tree"><img  src="img/bed/tree.png"></li>
+                        <li class="rug"><img src="img/bed/rug.png"></li>
+                        <li class="side-table"><img src="img/bed/side-table.png"></li>
+                        <li class="bed"><img src="img/bed/bed.png"></li>
+                        <!-- <li class="sleep"><img id="sleep" src="img/clothes/avatar/jpg/person/person_sleep.png"></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bath">
+                <img  class="light" src="img/bath/bathroom-light.png">
+                <div class="green">
+                    <ul>
+                        <li class="mirror"><img  src="img/bath/bathroom-mirror.png"></li>
+                        <li class="shelf"><img  src="img/bath/bathroom-shelf.png"></li>
+                        <li class="window"><img  src="img/bath/bathroom-window.png"></li>
+                        <li class="clock-face"><img  src="img/bath/clock-face.png"></li>
+                        <li class="clock-hand"><img  src="img/bath/clock-hand.png"></li>
+                        <!-- <li class="light"><img  src="img/bath/bathroom-light.png"></li> -->
+                    </ul>
+                </div>
+                <div class=tile>
+                    <ul>
+                        <li class="mat"><img  src="img/bath/bathroom-mat.png"></li>
+                        <li class="sink"><img  src="img/bath/bathroom-sink.png"></li>
+                        <li class="chair"><img  src="img/bath/bathroom-chair.png"></li>
+                        <!-- <li class="bath-tub"><img  src="img/bath/bath.png"></li> -->
+                        <!-- <li class="bath-tub-top"><img  src="img/bath/bath-top.png"></li> -->
+                        <!-- <li class="curtain"></li> -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="fitthing">
+                <div class="purple"></div>
+                <div class="clothes">
+                    <ul>
+                        <li class="wardrobe"><img  src="img/clothes/wardrobe.png"></li>
+                        <li class="rail"><img  src="img/clothes/wardrobe-rail.png"></li>
+                        <li class="rug2"><img  src="img/clothes/wardrobe-rug.png"></li>
+                        <li class="lamp"><img  src="img/clothes/lamp.png"></li>
+                        <li class="picture">
+                            <img src="img/clothes/picture-frame.png">
+                            <img class="click" src="img/clothes/click_btn.png">   <!-- 빛나 클릭이미지 추가 -->
+                        </li>
+                        <div class="popup_container">
+                            <span>option</span>
+                            <div class="popup01">
+                                <ul class="popup_arrow">
+                                    <button class="popup_prev"></button>
+                                    <button class="popup_next"></button>
+                                </ul>
+                                <div class="slider">
+                                    <ul class="popup_head">
+                                        <li><img src="img/wear/head/head_1.png" alt=""></li>
+                                        <li><img src="img/wear/head/head_2.png" alt=""></li>
+                                        <li><img src="img/wear/head/head_3.png" alt=""></li>
+                                        <li><img src="img/wear/head/head_4.png" alt=""></li>
+                                    </ul>
+                                </div>                    
+                            </div>   
+                            <div class="popup02">
+                                <ul class="popup_arrow">
+                                    <button class="popup_prev"></button>
+                                    <button class="popup_next"></button>
+                                </ul>
+                                <div class="slider">
+                                    <ul class="popup_top">
+                                        <li><img src="img/wear/top/top_1.png" alt=""></li>
+                                        <li class="active"><img src="img/wear/top/top_2.png" alt=""></li>
+                                        <li><img src="img/wear/top/top_3.png" alt=""></li>
+                                        <li><img src="img/wear/top/top_4.png" alt=""></li>
+                                    </ul>
+                                </div>                    
+                            </div>
+                            <div class="popup03">
+                                <ul class="popup_arrow">
+                                    <button class="popup_prev"></button>
+                                    <button class="popup_next"></button>
+                                </ul>
+                                <div class="slider">
+                                    <ul class="popup_bottom">
+                                        <li><img src="img/wear/bottom/bottom_1.png" alt=""></li>
+                                        <li class="active"><img src="img/wear/bottom/bottom_2.png" alt=""></li>
+                                        <li><img src="img/wear/bottom/bottom_3.png" alt=""></li>
+                                        <li><img src="img/wear/bottom/bottom_4.png" alt=""></li>
+                                    </ul>
+                                </div>                    
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="living">
+                <div class="green">
+                    <ul>                        
+                        <li class="knife"><img  src="img/meal/knife-rack.png"></li>
+                        <li class="shelf2"><img  src="img/meal/kitchen-shelf.png"></li>                        
+                        <li class="chalkboard"><img  src="img/meal/chalkboard.png"></li>                                               
+                        <li class="chalkboard2"><img  src="img/meal/chalk-notes.png"></li>                                                
+                        <li class="counters"><img  src="img/meal/kitchen-counters.png"></li>                        
+                    </ul>
+                </div>
+                <div class="meal">
+                    <ul>                        
+                        <li class="bin"><img  src="img/meal/bin.png"></li>
+                        <li class="rug3"><img  src="img/meal/kitchen-rug.png"></li>                       
+                        <!-- <li class="table"><img  src="img/meal/table.png"></li> -->
+                    </ul>
+                </div>
+            </div>
+
+           
+
+            <div class="road_wrap" data-bg0="rgb(172,198,102)" data-bg100="rgb(53,66,80)">
+                <div class="road">
+                    <ul class="road2">
+                        <li class="roadworks"><img src="img/road/roadworks.png" alt=""></li>
+                    </ul>  
+                </div>              
+            </div>
+
+            <div class="space">    
+                <div class="spaceStar"></div>             
+                <ul>
+                    <li class="alien"><img class="space-img1" src="img/space/alien.png" alt=""></li>
+                    <li class="earth"><img class="space-img2" src="img/space/planet-earth.png" alt=""></li>
+                    <li class="venus"><img class="space-img3" src="img/space/planet-venus.png" alt=""></li>
+                    <li class="mercury"><img class="space-img4" src="img/space/planet-mercury.png" alt=""></li>                    
+                    <li class="saturn"><img class="space-img5" src="img/space/saturn.png" alt=""></li>
+                </ul>
+            </div>
+
+        </div>  <!-- drop-room end -->
+
+        <div class="sec_1">
+            <div id="canvas">
+                <!-- <div class="zoom-icon zoom-icon-in"></div> -->
+                <div class="magazine-viewport">
+                    <div class="container">
+                        <div class="magazine">
+                            <!-- Next button -->
+                            <div ignore="1" class="next-button"></div>
+                            <!-- Previous button -->
+                            <div ignore="1" class="previous-button"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <div>
+                        <ul>
+                            <li class="i">
+                                <img src="pages/1-large.jpg" width="76" height="100" class="page-1">
+                                <span>1</span>
+                            </li>
+                            <li class="d">
+                                <img src="pages/2-large.jpg" width="76" height="100" class="page-2">
+                                <img src="pages/3-large.jpg" width="76" height="100" class="page-3">
+                                <span>2-3</span>
+                            </li>
+                            <li class="d">
+                                <img src="pages/4-large.jpg" width="76" height="100" class="page-4">
+                                <img src="pages/5-large.jpg" width="76" height="100" class="page-5">
+                                <span>4-5</span>
+                            </li>
+                            <li class="d">
+                                <img src="pages/6-large.jpg" width="76" height="100" class="page-6">
+                                <img src="pages/7-large.jpg" width="76" height="100" class="page-7">
+                                <span>6-7</span>
+                            </li>
+                            <li class="i">
+                                <img src="pages/8-large.jpg" width="76" height="100" class="page-8">
+                                <span>8</span>
+                            </li>
+                        <ul>
+                    </div>	
+                </div>
+            </div>  <!-- canvas end -->
+        </div> <!-- sec-1 end -->
+    </main>
+     
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script> 
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import '_mixin.scss';
+
+html, body{
+    
+    background-color: none;
+    margin:0; padding:0;
+
+}
+body {
+    // background: #b3d8e8;
+    // -ms-overflow-style: none; /* IE and Edge */
+    // scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    // display: none; /* Chrome, Safari, Opera*/
+}
+header{
+    position: fixed; left: 0; top: 0;
+    height:100vh; width: 100%;
+    z-index: 40;
+    background: rgba($color: rgb(74,74,74), $alpha: 01);
+    background-image: url("../img/space/space-stars.png"), url("../img/space/stars-blurred.png");
+    background-repeat: repeat;
+    .header_warp{
+        position: relative;
+        height: 100vh;
+        z-index:3;
+        h1{
+            z-index:999;
+            font-size: 300px;
+            @include absolute(left,50%,top,50%);
+            transform: translate(-50%,-50%);
+            a{
+                background: url(../img/index/wave_pink.gif) 50% 42%;
+                background-size:100%;
+                -webkit-text-fill-color:transparent;
+                -webkit-background-clip: text;
+            }
+        }
+        .menu{
+            // position: relative;
+            .tgl_bg{
+                position: fixed; right: 0;top: 0;
+                width: 100%;
+            } 
+            .tgl_bg svg{
+                width: 100%;
+                @include absolute(right,50%,top,0);
+                transition: .75s;
+            }
+            .tgl_btn{
+                position: absolute; right: 15.5%; top: 5%;
+                width: 3%;
+                background-color: aqua;
+            }
+            .tgl_btn .tgl_open{
+                @include absolute(left,0,top,0);
+                z-index: 1;
+            }
+            .tgl_btn .tgl_open img{width: 100%;}
+            .tgl_btn .tgl_close{
+                z-index: -1;
+                width: 30px;
+                opacity: 0;
+                transition: 0.5s;
+                @include absolute(left,0,top,0);
+            }
+            .tgl_btn .tgl_close span{
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                background: #b3d8e8;
+            }
+            .tgl_btn .tgl_close span:nth-child(1){
+                transform: translateY(100%) rotate(45deg)
+            }
+            .tgl_btn .tgl_close span:nth-child(2){
+                transform: translateY(-1000%) rotate(-45deg)
+            }
+        }
+
+    }
+}
+header.hidden{overflow: hidden;}
+header.none{display: none}
+.menubox{
+    @include absolute(top,25%,left,50%);
+    transform: translateX(-550px);
+    width: 383px;
+    height: 361px; 
+    border-radius: 200px;
+    background: #ce918e;
+    display: none;
+
+}
